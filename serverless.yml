@@ -1,0 +1,34 @@
+service: aws-node-scheduled-cron-project
+
+frameworkVersion: '3'
+
+provider:
+  name: aws
+  runtime: nodejs14.x
+
+functions:
+  rateHandler:
+    handler: handler.run
+    events:
+      # Invoke Lambda function every minute
+      - schedule: rate(1 minute)
+      - http:
+          path: sf
+          method: get
+
+plugins:
+  - serverless-webpack
+  - serverless-offline
+custom:
+  webpack:
+    keepOutputDirectory: true
+    # includeModules:
+    #   forceInclude:
+    #     - vm2
+    # webpackConfig: 'webpack.config.js' # Name of webpack configuration file
+    # includeModules: false # Node modules configuration for packaging
+    # packager: 'npm' # Packager that will be used to package your external modules
+    # excludeFiles: src/**/*.test.js # Provide a glob for files to ignore
+    # includeModules:
+    #   forceExclude:
+    #     - coffee-script
