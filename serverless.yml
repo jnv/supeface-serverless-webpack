@@ -22,9 +22,9 @@ plugins:
 custom:
   webpack:
     keepOutputDirectory: true
-    # includeModules:
-    #   forceInclude:
-    #     - vm2
+    includeModules:
+      forceInclude:
+        - vm2
     # webpackConfig: 'webpack.config.js' # Name of webpack configuration file
     # includeModules: false # Node modules configuration for packaging
     # packager: 'npm' # Packager that will be used to package your external modules
