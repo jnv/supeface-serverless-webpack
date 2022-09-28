@@ -6,7 +6,7 @@
   "license": "MIT",
   "dependencies": {
     "@superfaceai/one-sdk": "^1.2.1",
-    "vm2": "^3.9.6"
+    "vm2": "^3.9.11"
   },
   "devDependencies": {
     "copy-webpack-plugin": "^10.2.4",
