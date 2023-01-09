@@ -10,7 +10,7 @@
   },
   "devDependencies": {
     "copy-webpack-plugin": "^10.2.4",
-    "serverless-offline": "^8.4.0",
+    "serverless-offline": "^8.8.1",
     "serverless-webpack": "^5.6.1",
     "ts-loader": "^9.2.6"
   }
